@@ -1,0 +1,41 @@
+.container {
+  height: 100%;
+}
+
+.logo {
+  width: auto;
+  height: 35px;
+  float: left;
+}
+
+.content {
+  align-items: center;
+}
+
+.container-image {
+  position: relative;
+}
+
+.container-title {
+  position: absolute;
+  width: 70%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button {
+  margin-top: 10%;
+}
+
+.title {
+  text-align: center;
+}
+
+.image {
+  width: 100%;
+  height: calc(100vh - 64px);
+  object-fit: cover;
+  object-position: 100% 20%;
+  opacity: 0.7;
+}
