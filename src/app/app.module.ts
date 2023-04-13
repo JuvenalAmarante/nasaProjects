@@ -9,8 +9,11 @@ import pt from '@angular/common/locales/pt';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 import { HomeComponent } from './home/home.component';
+import { ProjectsComponent } from './projects/projects.component';
+
 import { AppRoutingModule } from './app-routing.module';
 
 import { NzButtonModule } from 'ng-zorro-antd/button';
@@ -20,14 +23,13 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzTypographyModule } from 'ng-zorro-antd/typography';
+import { NzListModule } from 'ng-zorro-antd/list';
+import { NzSkeletonModule } from 'ng-zorro-antd/skeleton';
 
 registerLocaleData(pt);
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent
-  ],
+  declarations: [AppComponent, HomeComponent, ProjectsComponent],
   imports: [
     NzButtonModule,
     NzGridModule,
@@ -36,15 +38,16 @@ registerLocaleData(pt);
     NzMenuModule,
     NzIconModule,
     NzTypographyModule,
+    NzListModule,
+    NzSkeletonModule,
     BrowserModule,
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    ScrollingModule,
+    AppRoutingModule,
   ],
-  providers: [
-    { provide: NZ_I18N, useValue: pt_BR }
-  ],
-  bootstrap: [AppComponent]
+  providers: [{ provide: NZ_I18N, useValue: pt_BR }],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
