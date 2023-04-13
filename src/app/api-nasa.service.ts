@@ -10,7 +10,7 @@ import { ProjectsList } from './projects-list';
 export class ApiNasaService {
   constructor(private http: HttpClient) {}
 
-  get(route: string, params: { [param: string]: any } = {}): Observable<ProjectsList> {
+  get(route: string, params: { [param: string]: any } = {}): Observable<any> {
     return this.http
       .get<ProjectsList>(`${environment.apiUrl}${route}`, {
         params: { ...params, api_key: environment.apiKey },
