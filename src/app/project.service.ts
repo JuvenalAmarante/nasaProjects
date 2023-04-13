@@ -13,39 +13,6 @@ export class ProjectService {
   constructor(private apiNasaService: ApiNasaService) {}
 
   getProjects(): Observable<ProjectsList> {
-    // return this.apiNasaService.get(this.route);
-
-    return new Observable((subscriber) => {
-      this.apiNasaService.get(this.route).subscribe((list) => {
-        subscriber.next(list);
-        subscriber.complete();
-      });
-
-      // subscriber.next({
-      //   projects: [
-      //     {
-      //       acronym: '',
-      //       projectId: 96897,
-      //       title: '',
-      //       website: '',
-      //       lastUpdated: '2023-4-11',
-      //     },
-      //     {
-      //       acronym: '',
-      //       projectId: 118498,
-      //       title: '',
-      //       website: '',
-      //       lastUpdated: '2023-4-5',
-      //     },
-      //     {
-      //       acronym: '',
-      //       projectId: 116332,
-      //       title: '',
-      //       website: '',
-      //       lastUpdated: '2023-3-31',
-      //     },
-      //   ],
-      // });
-    });
+    return this.apiNasaService.get(this.route);
   }
 }
