@@ -1,13 +1,3 @@
-.container {
-  height: 100%;
-}
-
-.logo {
-  width: auto;
-  height: 35px;
-  float: left;
-}
-
 .content {
   align-items: center;
 }

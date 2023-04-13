@@ -1,74 +1,32 @@
-<nz-layout class="container">
-  <nz-header>
-    <div class="logo">
-      <img
-        nz-image
-        nzDisablePreview
-        width="auto"
-        height="100%"
-        [nzSrc]="srcLogo"
-        [nzPlaceholder]="placeholderLogo"
-      />
+<div class="content">
+  <div class="container-image">
+    <img
+      class="image"
+      nz-image
+      nzDisablePreview
+      [nzSrc]="src"
+      [nzPlaceholder]="placeholder"
+    />
+
+    <div class="container-title">
+      <h1 class="title" nz-typography>Nasa Projects!</h1>
+
+      <h3 class="title" nz-typography>
+        Here we have a list of projects developed by NASA
+      </h3>
+
+      <a
+        class="button"
+        nz-button
+        nzBlock
+        nzSize="large"
+        nzType="primary"
+        routerLink="/projects"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+      >
+        Take a Look!
+      </a>
     </div>
-    <ul nz-menu nzTheme="dark" nzMode="horizontal">
-      <li nz-menu-item>
-        <a
-          routerLink="/projects"
-          routerLinkActive="active"
-          ariaCurrentWhenActive="page"
-          >Projects</a
-        >
-      </li>
-      <li nz-menu-item>
-        <a
-          routerLink="/home"
-          routerLinkActive="active"
-          ariaCurrentWhenActive="page"
-          >Home</a
-        >
-      </li>
-      <li nz-menu-item>
-        <a
-          routerLink="/about"
-          routerLinkActive="active"
-          ariaCurrentWhenActive="page"
-          >About</a
-        >
-      </li>
-    </ul>
-  </nz-header>
-  <nz-content>
-    <div class="content">
-      <div class="container-image">
-        <img
-          class="image"
-          nz-image
-          nzDisablePreview
-          [nzSrc]="src"
-          [nzPlaceholder]="placeholder"
-        />
-
-        <div class="container-title">
-          <h1 class="title" nz-typography>Nasa Projects!</h1>
-
-          <h3 class="title" nz-typography>
-            Here we have a list of projects developed by NASA
-          </h3>
-
-          <a
-            class="button"
-            nz-button
-            nzBlock
-            nzSize="large"
-            nzType="primary"
-            routerLink="/projects"
-            routerLinkActive="active"
-            ariaCurrentWhenActive="page"
-          >
-            Take a Look!
-          </a>
-        </div>
-      </div>
-    </div>
-  </nz-content>
-</nz-layout>
+  </div>
+</div>
