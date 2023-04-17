@@ -30,11 +30,11 @@ export class ProjectDetailsComponent implements OnInit {
         ...data.project,
         description:
           data.project.description
-            .replace(/<p>/gi, '').replace(/<\/p>/gi, '')
+            .replace(/<p>/gi, '<p nz-typography>')
             .trim() ||
           'Has not been described.',
         benefits:
-          data.project.benefits.replace(/<p>/gi, '').replace(/<\/p>/gi, '').trim() ||
+          data.project.benefits.replace(/<p>/gi, '<p nz-typography>').trim() ||
           'Has not been described.',
       };
 
