@@ -13,6 +13,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 
 import { HomeComponent } from './home/home.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { ProjectDetailsComponent } from './project-details/project-details.component';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -30,7 +31,12 @@ import { NzNotificationModule } from 'ng-zorro-antd/notification';
 registerLocaleData(pt);
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ProjectsComponent],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    ProjectsComponent,
+    ProjectDetailsComponent,
+  ],
   imports: [
     NzButtonModule,
     NzGridModule,

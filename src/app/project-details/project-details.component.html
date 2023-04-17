@@ -1,0 +1,33 @@
+<article class="container" nz-typography *ngIf="projectDetails">
+  <h1 class="title" nz-typography nz-col nzSpan="16" nzOffset="4">
+    {{ projectDetails.title }}
+  </h1>
+
+  <div class="content">
+    <h2 nz-typography *ngIf="managers?.length">Project Manager(s):</h2>
+
+    <nz-list nzGrid>
+      <div nz-row [nzGutter]="16">
+        <div nz-col [nzXXl]="8" [nzXl]="4" [nzLg]="6" [nzMd]="6" [nzSm]="12" [nzXs]="24" *ngFor="let manager of managers">
+          <nz-list-item>
+            <nz-list-item-meta
+              [nzTitle]="manager.fullName"
+              [nzDescription]="manager.primaryEmail"
+            >
+            </nz-list-item-meta>
+          </nz-list-item>
+        </div>
+      </div>
+      <nz-list-empty
+        nzNoResult="Managers has not been described"
+        *ngIf="managers?.length === 0"
+      ></nz-list-empty>
+    </nz-list>
+
+    <h2 nz-typography>Description</h2>
+    <p nz-typography>{{ projectDetails.description }}</p>
+
+    <h2 nz-typography>Benefits</h2>
+    <p nz-typography>{{ projectDetails.benefits }}</p>
+  </div>
+</article>
