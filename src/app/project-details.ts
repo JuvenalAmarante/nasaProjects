@@ -6,6 +6,7 @@ export interface ProjectDetails extends Project {
   description: string;
   statusDescription: string;
   releaseStatusString: string;
-  projectManagers: ProjectContributor[];
+  projectManagers: ProjectContributor[] | undefined;
+  programManagers: ProjectContributor[] | undefined;
   programDirectors: ProjectContributor[];
 }
