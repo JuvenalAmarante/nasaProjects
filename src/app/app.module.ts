@@ -27,6 +27,7 @@ import { NzTypographyModule } from 'ng-zorro-antd/typography';
 import { NzListModule } from 'ng-zorro-antd/list';
 import { NzSkeletonModule } from 'ng-zorro-antd/skeleton';
 import { NzNotificationModule } from 'ng-zorro-antd/notification';
+import { AboutComponent } from './about/about.component';
 
 registerLocaleData(pt);
 
@@ -36,6 +37,7 @@ registerLocaleData(pt);
     HomeComponent,
     ProjectsComponent,
     ProjectDetailsComponent,
+    AboutComponent,
   ],
   imports: [
     NzButtonModule,
