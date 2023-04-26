@@ -2,13 +2,6 @@
   height: 100%;
 }
 
-.logo {
-  width: auto;
-  height: 35px;
-  float: left;
-  margin-right: 10px;
-}
-
 nz-footer {
   text-align: center;
   background: #001529;
