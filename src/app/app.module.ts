@@ -29,6 +29,7 @@ import { NzSkeletonModule } from 'ng-zorro-antd/skeleton';
 import { NzNotificationModule } from 'ng-zorro-antd/notification';
 import { AboutComponent } from './about/about.component';
 import { NavbarComponent } from '../components/navbar/navbar.component';
+import { SidemenuComponent } from '../components/sidemenu/sidemenu.component';
 
 registerLocaleData(pt);
 
@@ -40,6 +41,7 @@ registerLocaleData(pt);
     ProjectDetailsComponent,
     AboutComponent,
     NavbarComponent,
+    SidemenuComponent,
   ],
   imports: [
     NzButtonModule,

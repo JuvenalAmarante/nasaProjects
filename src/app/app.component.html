@@ -1,9 +1,28 @@
-<nz-layout class="container">
-  <app-navbar></app-navbar>
+<nz-layout *ngIf="!mobile" class="container">
+  <nz-header>
+    <app-navbar></app-navbar>
+  </nz-header>
+
   <nz-content>
     <router-outlet></router-outlet>
   </nz-content>
+
   <nz-footer>
     Nasa Projects - Implement With ☕️ By Juvenal Amarante
   </nz-footer>
+</nz-layout>
+
+<nz-layout *ngIf="mobile" class="container ant-layout-has-sider">
+  <app-sidemenu #wrapper></app-sidemenu>
+  <ng-content *ngTemplateOutlet="wrapper.sidemenu" />
+
+  <nz-layout>
+    <nz-content>
+      <router-outlet></router-outlet>
+    </nz-content>
+
+    <nz-footer>
+      Nasa Projects - Implement With ☕️ By Juvenal Amarante
+    </nz-footer>
+  </nz-layout>
 </nz-layout>

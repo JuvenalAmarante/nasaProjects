@@ -1,0 +1,40 @@
+<ng-template #sidemenu>
+  <nz-sider nzCollapsible nzBreakpoint="lg" [nzCollapsedWidth]="0">
+    <div class="logo">
+      <img
+        nz-image
+        nzDisablePreview
+        width="auto"
+        height="100%"
+        [nzSrc]="src"
+        [nzPlaceholder]="placeholder"
+      />
+    </div>
+    <ul nz-menu nzTheme="dark" nzMode="inline">
+      <li nz-menu-item nzMatchRouter>
+        <a
+          routerLink="/home"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          >Home</a
+        >
+      </li>
+      <li nz-menu-item nzMatchRouter>
+        <a
+          routerLink="/projects"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          >Projects</a
+        >
+      </li>
+      <li nz-menu-item nzMatchRouter>
+        <a
+          routerLink="/about"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          >About</a
+        >
+      </li>
+    </ul>
+  </nz-sider>
+</ng-template>
