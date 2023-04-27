@@ -2,5 +2,6 @@
   width: auto;
   height: 35px;
   float: left;
-  margin-right: 10px;
+  margin: 14px;
+  line-height: 0;
 }
